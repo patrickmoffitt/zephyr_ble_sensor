@@ -1,0 +1,34 @@
+# Available runners configured by board.cmake.
+runners:
+- jlink
+- pyocd
+- blackmagicprobe
+
+# Default flash runner if --runner is not given.
+flash-runner: jlink
+
+# Default debug runner if --runner is not given.
+debug-runner: jlink
+
+# Common runner configuration values.
+config:
+  board_dir: /home/patrick/zephyrproject/zephyr/boards/arm/adafruit_feather_nrf52840
+  # Build outputs:
+  elf_file: zephyr.elf
+  hex_file: zephyr.hex
+  bin_file: zephyr.bin
+  # Host tools:
+  gdb: /opt/gcc-arm-none-eabi-9-2020-q2-update/bin/arm-none-eabi-gdb
+
+# Runner specific arguments
+args:
+  jlink:
+    - --dt-flash=y
+    - --device=nrf52
+    - --speed=4000
+  pyocd:
+    - --dt-flash=y
+    - --target=nrf52840
+    - --frequency=4000000
+  blackmagicprobe:
+    - --gdb-serial=/dev/ttyBmpGdb

@@ -1,0 +1,36 @@
+/*
+ * Copyright (c) 2020, Patrick Moffitt <patrick@moffitt.com>
+ * Copyright (c) 2018-2019 Peter Bigot Consulting, LLC
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * i2c interface for the Feather nRF52840 Express and the
+ * Adafruit BME680.
+ *
+ * Voltage divider interface for the Feather nRF52840 Express.
+ */
+
+/ {
+    vbatt {
+        compatible = "voltage-divider";
+        label = "Voltage Divider";
+        io-channels = <&adc 5>;
+        power-gpios = <&gpio0 29 0>;
+        output-ohms = <100000>;
+        status = "okay";
+    };
+    aliases {
+        vdiv = "/vbatt";
+    };
+};
+
+&i2c0 {
+    compatible = "nordic,nrf-twi";
+    bme680: bme680@77 {
+        compatible = "bosch,bme680";
+        reg = <0x77>;
+        label = "BME680";
+    };
+};
+
+
