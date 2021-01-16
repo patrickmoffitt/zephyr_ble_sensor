@@ -33,9 +33,9 @@ Materials List
 Notes on Construction
 ---------------------
 I designed a battery box with a circuit compartment and a lid to hold this project. (See the pictures below.) After you 
-print the parts you'll need to epoxy in three plastic stand-offs so you can use plastic screws to hold the parts together.
-In the circuit compartment I used museum putty to anchor the boards. My hope is that this approach will make it easy to 
-re-use the box for my next project since the putty is easy to remove.
+print the parts you'll need to epoxy in three plastic stand-offs so you can use M2.5 plastic screws to hold the parts 
+together. In the circuit compartment I used museum putty to anchor the boards. My hope is that this approach will make 
+it easy to re-use the box for my next project since the putty is easy to remove.
 
 - [Battery Box STL](images/6600_ma_hr_battery_box.stl)
 - [Circuit Compartment STL](images/6600_ma_hr_circuits_box.stl)
